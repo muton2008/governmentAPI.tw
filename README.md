@@ -5,10 +5,6 @@ This repository provides access to the real-time data API of the Taiwan Governme
 ## Table of Contents
 - [Introduction](#introduction)
 - [Features](#features)
-- [Usage](#usage)
-- [Endpoints](#endpoints)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## introduce
 
