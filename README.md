@@ -1,4 +1,4 @@
-# Taiwan government api
+# Taiwan government information api
 
 This repository provides access to the real-time data API of the Taiwan Government Information Disclosure Platform.
 
