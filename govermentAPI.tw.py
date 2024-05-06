@@ -125,6 +125,11 @@ class air_pollution:
         return response.json()
     
     def organize_records(self):
+        """
+        Return:
+            type:dict
+            content:{sitename:[all of the label and value of station]}
+        """
         temp=self.get()["records"]
         data={}
         for i in temp:
@@ -161,7 +166,7 @@ class air_pollution:
         ----------
         Return:
             type:list
-            content:
+            content:[id's information]
         """
         data=self.get()
         return [i for i in data["fields"] if i["id"]==Identification][0]
