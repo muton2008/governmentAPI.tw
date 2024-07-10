@@ -298,27 +298,3 @@ class air_pollution:
         data=self.organize_records()
         return [data[sitename]["longitude"],data[sitename]["latitude"]]
     
-class rain:
-    @cache(10)
-    def get(self):
-        response=requests.get("https://opendata.cwa.gov.tw/api/v1/rest/datastore/O-A0002-001?Authorization=rdec-key-123-45678-011121314")
-        response.raise_for_status()
-        return response.json()
-    
-    def identification(self):
-        data=self.get()
-        return [i["id"] for i in data["result"]["fields"]]
-    
-    def declare(self,Identification):
-        data=self.get()
-        return data["result"]["fields"]
-    def station_name(self):
-        """
-        Return:
-            type:List
-            content:[station name,station id]
-        """
-        data=self.get()
-        return [[i["StationName"],i["StationId"]] for i in data["records"]["Station"]]
-obj=rain()
-print(obj.station_name())
